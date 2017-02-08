@@ -22,7 +22,7 @@ namespace CGKSBibliothouris.Model.DomainModels
         {
             get
             {
-                return Author.SecondName;
+                return Author.LastName;
             }
         }
         public string Isbn { get; set; }

@@ -35,5 +35,10 @@ namespace CGKSBibliothouris
         {
             BookOverview.DataSource = listOfBooks;            
         }
+
+        private void MembersShow_Click(object sender, EventArgs e)
+        {
+            bookcontroller.ShowMembers();
+        }
     }
 }
