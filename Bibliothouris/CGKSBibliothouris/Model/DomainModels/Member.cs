@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace CGKSBibliothouris.Model.DomainModels
 {
-    internal class Member : Person
+    public class Member : Person
     {
         [Required]
         [Key]

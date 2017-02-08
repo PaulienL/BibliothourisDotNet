@@ -6,7 +6,7 @@ using System.Collections.Generic;
 
 namespace CGKSBibliothouris
 {
-    internal class BookService
+    public class BookService
     {
         private IBookRepository bookrepository;
 
