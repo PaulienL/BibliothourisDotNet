@@ -14,6 +14,6 @@ namespace CGKSBibliothouris.Model.Repositories
         void UpdateBook(Book bookToUpdate);
         void DeleteBook(int id);
 
-        IEnumerable<Book> ReadAllBooks();
+        List<Book> ReadAllBooks();
     }
 }

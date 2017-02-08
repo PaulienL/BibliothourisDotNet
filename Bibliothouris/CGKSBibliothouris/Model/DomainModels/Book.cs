@@ -10,7 +10,21 @@ namespace CGKSBibliothouris.Model.DomainModels
     {
         public int Id { get; set; }
         public string Title { get; set; }
-        public Author Author { get; set; }
+        private Author Author { get; set; }
+        public string FirstName
+        {
+            get
+            {
+                return Author.FirstName;
+            }
+        }
+        public string LastName
+        {
+            get
+            {
+                return Author.SecondName;
+            }
+        }
         public string Isbn { get; set; }
 
         public Book(string title, Author author, string isbn)

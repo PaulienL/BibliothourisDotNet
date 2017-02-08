@@ -6,7 +6,8 @@ using System.Threading.Tasks;
 
 namespace CGKSBibliothouris.Controller
 {
-    interface Interface1
+    interface Controller
     {
+        void View(); 
     }
 }

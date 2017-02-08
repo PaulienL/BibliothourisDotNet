@@ -49,17 +49,21 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Model\Repositories\BookRepositoryHC.cs" />
+    <Compile Include="Controller\BookService.cs" />
+    <Compile Include="Controller\Controller.cs" />
     <Compile Include="Model\DomainModels\Author.cs" />
     <Compile Include="Model\DomainModels\Book.cs" />
     <Compile Include="Model\DomainModels\Librarian.cs" />
     <Compile Include="Model\DomainModels\Member.cs" />
     <Compile Include="Model\DomainModels\Person.cs" />
     <Compile Include="Model\Repositories\BookRepository.cs" />
-    <Compile Include="View\Form1.cs">
+    <Compile Include="Controller\BookController.cs" />
+    <Compile Include="View\BookView.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="View\Form1.Designer.cs">
-      <DependentUpon>Form1.cs</DependentUpon>
+    <Compile Include="View\BookView.Designer.cs">
+      <DependentUpon>BookView.cs</DependentUpon>
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -72,6 +76,9 @@
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="View\BookView.resx">
+      <DependentUpon>BookView.cs</DependentUpon>
+    </EmbeddedResource>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
@@ -85,9 +92,7 @@
   <ItemGroup>
     <None Include="App.config" />
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="Controller\" />
-  </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.
