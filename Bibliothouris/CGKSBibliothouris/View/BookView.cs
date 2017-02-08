@@ -36,6 +36,8 @@ namespace CGKSBibliothouris
         {
             BookOverview.DataSource = typeof(List<Book>);
             BookOverview.DataSource = listOfBooks;
+            BookOverview.Refresh();
+            BookOverview.AutoSize = true;
         }
 
         private void MembersShow_Click(object sender, EventArgs e)
@@ -43,15 +45,15 @@ namespace CGKSBibliothouris
             bookcontroller.ShowMembers();
         }
 
+        private void AddBook_Click(object sender, EventArgs e)
+        {
+            bookcontroller.AddBookView();
+        }
+
         private void BookOverview_DoubleClick(object sender, EventArgs e)
         {
             int selectedId = int.Parse(BookOverview.CurrentRow.Cells[0].Value.ToString());
             bookcontroller.ShowDetailsBook(selectedId);
-        }
-
-        private void AddBook_Click(object sender, EventArgs e)
-        {
-            bookcontroller.AddBookView(); 
         }
     }
 }

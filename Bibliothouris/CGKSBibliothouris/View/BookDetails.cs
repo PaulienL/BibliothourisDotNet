@@ -8,6 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using CGKSBibliothouris.Controller;
+using CGKSBibliothouris.Model.DomainModels;
 
 namespace CGKSBibliothouris.View
 {
@@ -18,7 +19,6 @@ namespace CGKSBibliothouris.View
         public BookDetails()
         {
             InitializeComponent();
-            this.controller = bookController;
         }
 
         public void SetFieldReadOnly()
@@ -55,6 +55,11 @@ namespace CGKSBibliothouris.View
             txtTitle.Clear();
             txtFirstName.Clear();
             txtLastName.Clear(); 
+        }
+
+        internal void ShowBookDetails(Book book)
+        {
+            throw new NotImplementedException();
         }
     }
 }
