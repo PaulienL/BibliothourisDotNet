@@ -14,6 +14,7 @@ namespace CGKSBibliothouris
         {
             bookrepository = new BookRepositoryHC();
         }
+
         internal List<Book> GetAllBooks()
         {
             return bookrepository.ReadAllBooks(); 
