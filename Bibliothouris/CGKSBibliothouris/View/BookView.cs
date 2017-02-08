@@ -19,9 +19,12 @@ namespace CGKSBibliothouris
         public BookView()
         {
             InitializeComponent();
-            bookcontroller = new BookController(this);
         }
 
+        internal void AddController(BookController bookController)
+        {
+            this.bookcontroller = bookController;
+        }
 
         private void frmBookView_Load(object sender, EventArgs e)
         {

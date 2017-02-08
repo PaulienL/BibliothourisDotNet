@@ -16,13 +16,13 @@ namespace CGKSBibliothouris.Controller
         {
             this.memberController = memberController;
             bookservice = new BookService();
-            bookService = new BookService();
-            this.bookView = bookView; 
+            this.bookView = bookView;
+            bookView.AddController(this);
         }
         
         internal List<Book> GetAllBooks()
         {
-            return bookService.GetAllBooks();
+            return bookservice.GetAllBooks();
         }
 
         public void ShowView()
@@ -33,7 +33,7 @@ namespace CGKSBibliothouris.Controller
 
         private void LoadAllBooks()
         {
-            bookView.UpdateDataInLstBook(bookService.GetAllBooks());
+            bookView.UpdateDataInLstBook(bookservice.GetAllBooks());
         }
 
         public void ShowMembers()
