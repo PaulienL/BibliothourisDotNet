@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace CGKSBibliothouris.Model.DomainModels
 {
-    abstract class Person
+    public abstract class Person
     {
         public int Id { get; set; }
         public string FirstName { get; set; }

@@ -20,7 +20,7 @@ namespace CGKSBibliothouris
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new frmBookView());
+            Application.Run(new BookView());
         }
     }
 }

@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace CGKSBibliothouris.Model.DomainModels
 {
-    class Book
+    public class Book
     {
         public int Id { get; set; }
         public string Title { get; set; }
@@ -22,7 +22,7 @@ namespace CGKSBibliothouris.Model.DomainModels
         {
             get
             {
-                return Author.SecondName;
+                return Author.LastName;
             }
         }
         public string Isbn { get; set; }
