@@ -18,5 +18,10 @@ namespace CGKSBibliothouris
         {
             return bookrepository.ReadAllBooks(); 
         }
+
+        public Book GetBook(int id)
+        {
+            return bookrepository.ReadBook(id);
+        }
     }
 }

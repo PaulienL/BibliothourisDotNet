@@ -7,14 +7,18 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using CGKSBibliothouris.Controller;
 
 namespace CGKSBibliothouris.View
 {
     public partial class BookDetails : Form
     {
-        public BookDetails()
+        private BookController controller;
+
+        public BookDetails(BookController bookController)
         {
             InitializeComponent();
+            this.controller = bookController;
         }
 
         public void SetFieldReadOnly()
@@ -33,6 +37,31 @@ namespace CGKSBibliothouris.View
             txtTitle.Enabled = true;
             txtFirstName.Enabled = true;
             txtLastName.Enabled = true;
+        }
+
+        public TextBox getId()
+        {
+            return txtId;
+        }
+
+        public TextBox getTitle()
+        {
+            return txtTitle;
+        }
+
+        public TextBox getIsbn()
+        {
+            return txtIsbn;
+        }
+
+        public TextBox getFirstName()
+        {
+            return txtFirstName;
+        }
+
+        public TextBox getLastName()
+        {
+            return txtLastName;
         }
     }
 }

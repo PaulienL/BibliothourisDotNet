@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Linq;
 using CGKSBibliothouris.Model.DomainModels;
 using CGKSBibliothouris.Model.Repositories;
 
@@ -37,7 +38,7 @@ namespace CGKSBibliothouris
 
         public Book ReadBook(int id)
         {
-            throw new NotImplementedException();
+            return books.FirstOrDefault(book => book.Id == id);
         }
 
         public void UpdateBook(Book bookToUpdate)

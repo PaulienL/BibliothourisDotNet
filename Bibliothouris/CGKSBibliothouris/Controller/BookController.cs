@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using CGKSBibliothouris.Controller;
 using CGKSBibliothouris.Model.DomainModels;
+using CGKSBibliothouris.View;
 
 namespace CGKSBibliothouris.Controller
 {
@@ -42,7 +43,19 @@ namespace CGKSBibliothouris.Controller
 
         public void ShowDetailsBook(int id)
         {
-            
+            BookDetails details = new BookDetails(this);
+            details.SetFieldReadOnly();
+            Book book = bookservice.GetBook(id);
+            SetTextFields(details, book);
+        }
+
+        private void SetTextFields(BookDetails details, Book book)
+        {
+            details.getId().Text = book.Id.ToString();
+            details.getIsbn().Text = book.Isbn;
+            details.getTitle().Text = book.Title;
+            details.getFirstName().Text = book.FirstName;
+            details.getLastName().Text = book.LastName;
         }
     }
 }
