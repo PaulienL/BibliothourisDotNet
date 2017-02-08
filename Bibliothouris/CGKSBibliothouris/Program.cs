@@ -3,6 +3,10 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using CGKSBibliothouris.Controller;
+using CGKSBibliothouris.Model.Repositories;
+using CGKSBibliothouris.Model.Services;
+using CGKSBibliothouris.View;
 
 namespace CGKSBibliothouris
 {
@@ -14,9 +18,10 @@ namespace CGKSBibliothouris
         [STAThread]
         static void Main()
         {
-            Application.EnableVisualStyles();
+            /*Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new Form1());
+            Application.Run(new Form1());*/
+            new MemberController(new MemberView(), new MemberService(new MemberRepository())).ShowView();
         }
     }
 }
