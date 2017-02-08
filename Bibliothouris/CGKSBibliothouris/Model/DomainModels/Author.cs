@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace CGKSBibliothouris.Model.DomainModels
 {
-    class Author : Person
+    public class Author : Person
     {
         public Author(string firstName, string secondName) : base(firstName, secondName)
         {

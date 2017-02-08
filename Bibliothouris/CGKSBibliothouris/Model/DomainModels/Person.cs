@@ -6,16 +6,16 @@ using System.Threading.Tasks;
 
 namespace CGKSBibliothouris.Model.DomainModels
 {
-    abstract class Person
+    public abstract class Person
     {
         public int Id { get; set; }
         public string FirstName { get; set; }
         public string LastName { get; set; }
 
-        public Person(string firstName,string secondName)
+        public Person(string firstName,string lastName)
         {
-            this.FirstName = FirstName;
-            this.LastName = LastName; 
+            this.FirstName = firstName;
+            this.LastName = lastName; 
         }
 
     }
