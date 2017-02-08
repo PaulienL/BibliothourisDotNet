@@ -22,7 +22,7 @@ namespace CGKSBibliothouris.Model.DomainModels
         }
     }
 
-    internal class Address
+    public class Address
     {
         public string Street { get; set; }
         [Required]
