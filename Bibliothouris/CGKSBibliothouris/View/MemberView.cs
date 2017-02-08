@@ -7,12 +7,14 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using CGKSBibliothouris.Controller;
 using CGKSBibliothouris.Model.DomainModels;
 
 namespace CGKSBibliothouris.View
 {
     public partial class MemberView : Form
     {
+        private MemberController memberController;
         public MemberView()
         {
             InitializeComponent();
@@ -29,6 +31,11 @@ namespace CGKSBibliothouris.View
 
             }
             
+        }
+
+        internal void AddMemberController(MemberController memberController)
+        {
+            this.memberController = memberController;
         }
     }
 }

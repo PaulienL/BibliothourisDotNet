@@ -58,6 +58,8 @@
     <Compile Include="Model\DomainModels\Person.cs" />
     <Compile Include="Model\Repositories\BookRepository.cs" />
     <Compile Include="Model\Repositories\IPersonRepository.cs" />
+    <Compile Include="Model\Repositories\MemberRepository.cs" />
+    <Compile Include="Model\Services\MemberService.cs" />
     <Compile Include="View\Form1.cs">
       <SubType>Form</SubType>
     </Compile>
