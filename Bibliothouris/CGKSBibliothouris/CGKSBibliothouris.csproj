@@ -66,6 +66,12 @@
     <Compile Include="View\BookDetails.Designer.cs">
       <DependentUpon>BookDetails.cs</DependentUpon>
     </Compile>
+    <Compile Include="View\BookSearchResults.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\BookSearchResults.Designer.cs">
+      <DependentUpon>BookSearchResults.cs</DependentUpon>
+    </Compile>
     <Compile Include="View\BookView.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -83,6 +89,12 @@
     <Compile Include="View\MemberView.Designer.cs">
       <DependentUpon>MemberView.cs</DependentUpon>
     </Compile>
+    <Compile Include="View\SearchBookView.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\SearchBookView.Designer.cs">
+      <DependentUpon>SearchBookView.cs</DependentUpon>
+    </Compile>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
@@ -95,11 +107,17 @@
     <EmbeddedResource Include="View\BookDetails.resx">
       <DependentUpon>BookDetails.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="View\BookSearchResults.resx">
+      <DependentUpon>BookSearchResults.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="View\BookView.resx">
       <DependentUpon>BookView.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="View\MemberView.resx">
       <DependentUpon>MemberView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\SearchBookView.resx">
+      <DependentUpon>SearchBookView.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>

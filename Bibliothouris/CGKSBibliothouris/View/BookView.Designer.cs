@@ -85,10 +85,12 @@
             this.BookOverview.AllowUserToDeleteRows = false;
             this.BookOverview.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.BookOverview.Location = new System.Drawing.Point(12, 27);
+            this.BookOverview.MultiSelect = false;
             this.BookOverview.Name = "BookOverview";
             this.BookOverview.ReadOnly = true;
             this.BookOverview.Size = new System.Drawing.Size(240, 150);
             this.BookOverview.TabIndex = 2;
+            this.BookOverview.DoubleClick += new System.EventHandler(this.BookOverview_DoubleClick);
             // 
             // AddBook
             // 

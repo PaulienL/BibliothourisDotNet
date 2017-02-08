@@ -11,13 +11,14 @@ using CGKSBibliothouris.Controller;
 
 namespace CGKSBibliothouris.View
 {
-    public partial class BookDetails : Form
+    internal partial class BookDetails : Form
     {
         private BookController bookController;
 
         public BookDetails()
         {
             InitializeComponent();
+            this.controller = bookController;
         }
 
         public void SetFieldReadOnly()
