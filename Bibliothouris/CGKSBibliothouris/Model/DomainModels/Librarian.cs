@@ -6,7 +6,10 @@ using System.Threading.Tasks;
 
 namespace CGKSBibliothouris.Model.DomainModels
 {
-    class Librarian
+    class Librarian : Member
     {
+        public Librarian(string firstName, string secondName) : base(firstName, secondName)
+        {
+        }
     }
 }

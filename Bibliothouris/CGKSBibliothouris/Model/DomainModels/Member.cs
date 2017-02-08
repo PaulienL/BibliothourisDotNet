@@ -6,7 +6,10 @@ using System.Threading.Tasks;
 
 namespace CGKSBibliothouris.Model.DomainModels
 {
-    class Member
+    class Member : Person
     {
+        public Member(string firstName, string secondName) : base(firstName, secondName)
+        {
+        }
     }
 }

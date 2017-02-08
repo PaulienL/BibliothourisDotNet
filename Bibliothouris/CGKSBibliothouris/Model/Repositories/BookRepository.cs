@@ -8,5 +8,9 @@ namespace CGKSBibliothouris.Model.Repositories
 {
     interface BookRepository
     {
+        public Book CreateBook(string title, Author author, string isbn)
+        {
+
+        }
     }
 }

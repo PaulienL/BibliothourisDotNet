@@ -6,7 +6,17 @@ using System.Threading.Tasks;
 
 namespace CGKSBibliothouris.Model.DomainModels
 {
-    class User
+    abstract class Person
     {
+        public int Id { get; set; }
+        public string FirstName { get; set; }
+        public string SecondName { get; set; }
+
+        public Person(string firstName,string secondName)
+        {
+            this.FirstName = FirstName;
+            this.SecondName = SecondName; 
+        }
+
     }
 }

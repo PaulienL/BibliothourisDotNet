@@ -6,16 +6,10 @@ using System.Threading.Tasks;
 
 namespace CGKSBibliothouris.Model.DomainModels
 {
-    class Author
+    class Author : Person
     {
-        public int Id { get; set; }
-        public string firstName { get; set; }
-        public string secondName { get; set; }
-
-        public Author(string firstName, string secondName)
+        public Author(string firstName, string secondName) : base(firstName, secondName)
         {
-            this.firstName = firstName;
-            this.secondName = secondName; 
         }
     }
 }
