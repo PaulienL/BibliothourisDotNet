@@ -14,11 +14,12 @@ namespace CGKSBibliothouris.Controller
         private MemberView memberView;
         private MemberService memberService;
 
-        public MemberController(MemberView memberView)
+        public MemberController(MemberView memberView, MemberService memberService)
         {
             this.memberView = memberView;
+            this.memberService = memberService;
             memberView.AddMemberController(this);
-        }
+          }
 
         public void ShowView()
         {

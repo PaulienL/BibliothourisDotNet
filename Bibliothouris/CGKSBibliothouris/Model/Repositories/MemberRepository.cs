@@ -9,7 +9,7 @@ namespace CGKSBibliothouris.Model.Repositories
 {
     class MemberRepository
     {
-        private List<Member> members = new List<Member>();
+        private readonly List<Member> members = new List<Member>() {new Member("William", "Alegria"),new Member("Seppe", "Gielen")};
 
         public List<Member> GetAllMembers()
         {

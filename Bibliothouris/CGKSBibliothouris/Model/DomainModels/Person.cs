@@ -14,8 +14,8 @@ namespace CGKSBibliothouris.Model.DomainModels
 
         public Person(string firstName,string secondName)
         {
-            this.FirstName = firstName;
-            this.LastName = secondName; 
+            this.FirstName = FirstName;
+            this.LastName = LastName; 
         }
 
     }

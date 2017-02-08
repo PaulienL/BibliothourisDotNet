@@ -3,6 +3,10 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using CGKSBibliothouris.Controller;
+using CGKSBibliothouris.Model.Repositories;
+using CGKSBibliothouris.Model.Services;
+using CGKSBibliothouris.View;
 
 namespace CGKSBibliothouris
 {

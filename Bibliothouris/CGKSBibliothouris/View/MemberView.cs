@@ -28,7 +28,6 @@ namespace CGKSBibliothouris.View
                 memberItem.SubItems.Add(member.FirstName);
                 memberItem.SubItems.Add(member.LastName);
                 memberList.Items.Add(memberItem);
-
             }
             
         }
