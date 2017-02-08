@@ -1,6 +1,6 @@
 ﻿namespace CGKSBibliothouris
 {
-    partial class frmBookView
+    partial class BookView
     {
         /// <summary>
         /// Required designer variable.
