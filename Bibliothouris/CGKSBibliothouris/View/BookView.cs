@@ -19,6 +19,7 @@ namespace CGKSBibliothouris
         public BookView()
         {
             InitializeComponent();
+            this.AutoSize = true;
         }
 
         internal void AddController(BookController bookController)
@@ -33,12 +34,19 @@ namespace CGKSBibliothouris
 
         public void UpdateDataInLstBook(List<Book> listOfBooks)
         {
-            BookOverview.DataSource = listOfBooks;            
+            BookOverview.DataSource = listOfBooks;
+            BookOverview.AutoSize = true;
         }
 
         private void MembersShow_Click(object sender, EventArgs e)
         {
             bookcontroller.ShowMembers();
+        }
+
+        private void BookOverview_DoubleClick(object sender, EventArgs e)
+        {
+            int selectedId = int.Parse(BookOverview.CurrentRow.Cells[0].Value.ToString());
+            bookcontroller.ShowDetailsBook(selectedId);
         }
     }
 }

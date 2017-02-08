@@ -74,7 +74,7 @@
             // showAllToolStripMenuItem
             // 
             this.showAllToolStripMenuItem.Name = "showAllToolStripMenuItem";
-            this.showAllToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.showAllToolStripMenuItem.Size = new System.Drawing.Size(120, 22);
             this.showAllToolStripMenuItem.Text = "Show All";
             this.showAllToolStripMenuItem.Click += new System.EventHandler(this.MembersShow_Click);
             // 
@@ -84,12 +84,14 @@
             this.BookOverview.AllowUserToDeleteRows = false;
             this.BookOverview.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.BookOverview.Location = new System.Drawing.Point(12, 27);
+            this.BookOverview.MultiSelect = false;
             this.BookOverview.Name = "BookOverview";
             this.BookOverview.ReadOnly = true;
             this.BookOverview.Size = new System.Drawing.Size(240, 150);
             this.BookOverview.TabIndex = 2;
+            this.BookOverview.DoubleClick += new System.EventHandler(this.BookOverview_DoubleClick);
             // 
-            // frmBookView
+            // BookView
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -97,7 +99,7 @@
             this.Controls.Add(this.BookOverview);
             this.Controls.Add(this.menuStrip1);
             this.MainMenuStrip = this.menuStrip1;
-            this.Name = "frmBookView";
+            this.Name = "BookView";
             this.Text = "Books";
             this.Load += new System.EventHandler(this.frmBookView_Load);
             this.menuStrip1.ResumeLayout(false);

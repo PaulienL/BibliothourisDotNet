@@ -41,12 +41,12 @@ namespace CGKSBibliothouris.Controller
             memberController.ShowView();
         }
 
-        public void ShowDetailsBook(int id)
+        public void ShowDetailsBook(int bookId)
         {
             BookDetails details = new BookDetails(this);
             details.SetFieldReadOnly();
-            Book book = bookservice.GetBook(id);
-            SetTextFields(details, book);
+            SetTextFields(details, bookservice.GetBook(bookId));
+            details.ShowDialog();
         }
 
         private void SetTextFields(BookDetails details, Book book)
@@ -57,5 +57,6 @@ namespace CGKSBibliothouris.Controller
             details.getFirstName().Text = book.FirstName;
             details.getLastName().Text = book.LastName;
         }
+ 
     }
 }
