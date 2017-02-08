@@ -8,8 +8,7 @@ using System.Threading.Tasks;
 namespace CGKSBibliothouris.Controller
 {
     interface Controller
-    {
-        void View(); 
+    { 
         void ShowView();
     }
 }
