@@ -1,4 +1,5 @@
-﻿using CGKSBibliothouris.Model.DomainModels;
+﻿using CGKSBibliothouris.Controller;
+using CGKSBibliothouris.Model.DomainModels;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -11,27 +12,23 @@ using System.Windows.Forms;
 
 namespace CGKSBibliothouris
 {
-    public partial class frmBookView : Form
+    public partial class BookView : Form
     {
         private BookController bookcontroller;
 
-        public frmBookView()
+        public BookView()
         {
             InitializeComponent();
-            bookcontroller = new BookController();
+            bookcontroller = new BookController(this);
         }
 
-        private void listBox1_SelectedIndexChanged(object sender, EventArgs e)
-        {
-
-        }
 
         private void frmBookView_Load(object sender, EventArgs e)
         {
             UpdateDataInLstBook(bookcontroller.GetAllBooks());
         }
 
-        private void UpdateDataInLstBook(List<Book> listOfBooks)
+        public void UpdateDataInLstBook(List<Book> listOfBooks)
         {
             BookOverview.DataSource = listOfBooks;            
         }

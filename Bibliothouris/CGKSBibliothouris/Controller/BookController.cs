@@ -1,21 +1,37 @@
 ﻿using System;
 using System.Collections.Generic;
 using CGKSBibliothouris.Model.DomainModels;
+using CGKSBibliothouris.Controller; 
 
-namespace CGKSBibliothouris
+namespace CGKSBibliothouris.Controller
 {
-    internal class BookController
+    internal class BookController : Controller
     {
-        private BookService bookservice;
+        private BookView bookView;
+        private BookService bookService;
 
-        public BookController()
+      
+
+        public BookController(BookView bookView)
         {
-            bookservice = new BookService(); 
+            bookService = new BookService();
+            this.bookView = bookView; 
         }
-
+        
         internal List<Book> GetAllBooks()
         {
-            return bookservice.GetAllBooks();
+            return bookService.GetAllBooks();
+        }
+
+        public void ShowView()
+        {
+            LoadAllBooks();
+            bookView.ShowDialog();
+        }
+
+        private void LoadAllBooks()
+        {
+            bookView.UpdateDataInLstBook(bookService.GetAllBooks());
         }
     }
 }

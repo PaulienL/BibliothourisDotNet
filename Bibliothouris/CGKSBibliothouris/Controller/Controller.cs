@@ -9,7 +9,6 @@ namespace CGKSBibliothouris.Controller
 {
     interface Controller
     {
-        void View(); 
         void ShowView();
     }
 }
