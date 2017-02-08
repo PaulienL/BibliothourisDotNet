@@ -46,7 +46,7 @@ namespace CGKSBibliothouris.Controller
             BookDetails details = new BookDetails(this);
             details.SetFieldReadOnly();
             SetTextFields(details, bookservice.GetBook(bookId));
-            details.ShowDialog();
+            details.ShowDialog()
         }
 
         private void SetTextFields(BookDetails details, Book book)
