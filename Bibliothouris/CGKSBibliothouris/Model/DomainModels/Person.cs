@@ -10,12 +10,12 @@ namespace CGKSBibliothouris.Model.DomainModels
     {
         public int Id { get; set; }
         public string FirstName { get; set; }
-        public string SecondName { get; set; }
+        public string LastName { get; set; }
 
         public Person(string firstName,string secondName)
         {
             this.FirstName = FirstName;
-            this.SecondName = SecondName; 
+            this.LastName = LastName; 
         }
 
     }
