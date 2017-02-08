@@ -1,4 +1,5 @@
-﻿using System;
+﻿using CGKSBibliothouris.Model.DomainModels;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -6,11 +7,13 @@ using System.Threading.Tasks;
 
 namespace CGKSBibliothouris.Model.Repositories
 {
-    interface BookRepository
+    interface IBookRepository
     {
-        public Book CreateBook(string title, Author author, string isbn)
-        {
+        Book CreateBook(Book book);
+        Book ReadBook(int id);
+        void UpdateBook(Book bookToUpdate);
+        void DeleteBook(int id);
 
-        }
+        IEnumerable<Book> ReadAllBooks();
     }
 }
