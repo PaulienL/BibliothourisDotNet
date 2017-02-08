@@ -8,17 +8,17 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using CGKSBibliothouris.Controller;
+using CGKSBibliothouris.Model.DomainModels;
 
 namespace CGKSBibliothouris.View
 {
     internal partial class BookDetails : Form
     {
-        private BookController controller;
+        private BookController bookController;
 
-        public BookDetails(BookController bookController)
+        public BookDetails()
         {
             InitializeComponent();
-            this.controller = bookController;
         }
 
         public void SetFieldReadOnly()
@@ -39,29 +39,27 @@ namespace CGKSBibliothouris.View
             txtLastName.Enabled = true;
         }
 
-        public TextBox getId()
+        internal void AddController(BookController bookController)
         {
-            return txtId;
+            this.bookController = bookController;
         }
 
-        public TextBox getTitle()
+        private void btnSave_Click(object sender, EventArgs e)
         {
-            return txtTitle;
+            bookController.CreateBook(txtFirstName.Text, txtLastName.Text, txtTitle.Text, txtIsbn.Text);
         }
 
-        public TextBox getIsbn()
+        internal void Clear()
         {
-            return txtIsbn;
+            txtIsbn.Clear();
+            txtTitle.Clear();
+            txtFirstName.Clear();
+            txtLastName.Clear(); 
         }
 
-        public TextBox getFirstName()
+        internal void ShowBookDetails(Book book)
         {
-            return txtFirstName;
-        }
-
-        public TextBox getLastName()
-        {
-            return txtLastName;
+            throw new NotImplementedException();
         }
     }
 }

@@ -11,13 +11,16 @@ namespace CGKSBibliothouris.Controller
         public MemberController memberController;
         private BookService bookservice;
         private BookView bookView;
+        private BookDetails bookDetails; 
 
-        public BookController(BookView bookView, MemberController memberController)
+        public BookController(BookView bookView, MemberController memberController, BookDetails bookDetails)
         {
             this.memberController = memberController;
             bookservice = new BookService();
             this.bookView = bookView;
             bookView.AddController(this);
+            this.bookDetails = bookDetails;
+            bookDetails.AddController(this); 
         }
         
         internal List<Book> GetAllBooks()
@@ -41,21 +44,25 @@ namespace CGKSBibliothouris.Controller
             memberController.ShowView();
         }
 
-        public void ShowDetailsBook(int bookId)
+        internal void CreateBook(string firstName, string lastName, string title, string isbn)
         {
-            BookDetails details = new BookDetails(this);
-            details.SetFieldReadOnly();
-            SetTextFields(details, bookservice.GetBook(bookId));
-            details.ShowDialog()
+            bookservice.CreateAndAddBook(firstName, lastName, title, isbn);
+            bookDetails.Close();
+            bookDetails.Clear(); 
+            LoadAllBooks();
         }
 
-        private void SetTextFields(BookDetails details, Book book)
+        public void ShowDetailsBook(int id)
         {
-            details.getId().Text = book.Id.ToString();
-            details.getIsbn().Text = book.Isbn;
-            details.getTitle().Text = book.Title;
-            details.getFirstName().Text = book.FirstName;
-            details.getLastName().Text = book.LastName;
+            bookDetails.SetFieldReadOnly();
+            bookDetails.ShowBookDetails(bookservice.GetBook(id));
+            bookDetails.ShowDialog();
+        }
+
+        internal void AddBookView()
+        {
+            bookDetails.SetFieldsEditable(); 
+            bookDetails.ShowDialog(); 
         }
  
     }

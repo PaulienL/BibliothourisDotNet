@@ -34,13 +34,20 @@ namespace CGKSBibliothouris
 
         public void UpdateDataInLstBook(List<Book> listOfBooks)
         {
+            BookOverview.DataSource = typeof(List<Book>);
             BookOverview.DataSource = listOfBooks;
+            BookOverview.Refresh();
             BookOverview.AutoSize = true;
         }
 
         private void MembersShow_Click(object sender, EventArgs e)
         {
             bookcontroller.ShowMembers();
+        }
+
+        private void AddBook_Click(object sender, EventArgs e)
+        {
+            bookcontroller.AddBookView();
         }
 
         private void BookOverview_DoubleClick(object sender, EventArgs e)

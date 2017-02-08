@@ -23,5 +23,10 @@ namespace CGKSBibliothouris
         {
             return bookrepository.ReadBook(id);
         }
+
+        internal void CreateAndAddBook(string firstName, string lastName, string title, string isbn)
+        {
+            bookrepository.AddBook(new Book(title, new Author(firstName, lastName),  isbn)); 
+        }
     }
 }

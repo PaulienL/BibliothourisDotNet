@@ -48,9 +48,10 @@
             this.btnSave.Location = new System.Drawing.Point(56, 196);
             this.btnSave.Name = "btnSave";
             this.btnSave.Size = new System.Drawing.Size(128, 33);
-            this.btnSave.TabIndex = 0;
+            this.btnSave.TabIndex = 5;
             this.btnSave.Text = "Save";
             this.btnSave.UseVisualStyleBackColor = true;
+            this.btnSave.Click += new System.EventHandler(this.btnSave_Click);
             // 
             // txtId
             // 
@@ -87,7 +88,7 @@
             this.txtLastName.Location = new System.Drawing.Point(73, 45);
             this.txtLastName.Name = "txtLastName";
             this.txtLastName.Size = new System.Drawing.Size(100, 20);
-            this.txtLastName.TabIndex = 3;
+            this.txtLastName.TabIndex = 4;
             // 
             // label3
             // 
@@ -105,7 +106,7 @@
             this.txtFirstName.Location = new System.Drawing.Point(73, 19);
             this.txtFirstName.Name = "txtFirstName";
             this.txtFirstName.Size = new System.Drawing.Size(100, 20);
-            this.txtFirstName.TabIndex = 5;
+            this.txtFirstName.TabIndex = 3;
             // 
             // label4
             // 
@@ -121,7 +122,7 @@
             this.txtTitle.Location = new System.Drawing.Point(84, 64);
             this.txtTitle.Name = "txtTitle";
             this.txtTitle.Size = new System.Drawing.Size(100, 20);
-            this.txtTitle.TabIndex = 7;
+            this.txtTitle.TabIndex = 2;
             // 
             // label5
             // 
@@ -137,7 +138,7 @@
             this.txtIsbn.Location = new System.Drawing.Point(84, 38);
             this.txtIsbn.Name = "txtIsbn";
             this.txtIsbn.Size = new System.Drawing.Size(100, 20);
-            this.txtIsbn.TabIndex = 9;
+            this.txtIsbn.TabIndex = 1;
             // 
             // groupBox1
             // 

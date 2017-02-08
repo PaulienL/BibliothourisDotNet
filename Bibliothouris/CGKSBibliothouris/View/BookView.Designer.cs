@@ -34,6 +34,7 @@
             this.membersToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.showAllToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.BookOverview = new System.Windows.Forms.DataGridView();
+            this.AddBook = new System.Windows.Forms.Button();
             this.menuStrip1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.BookOverview)).BeginInit();
             this.SuspendLayout();
@@ -45,7 +46,7 @@
             this.membersToolStripMenuItem});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
-            this.menuStrip1.Size = new System.Drawing.Size(284, 24);
+            this.menuStrip1.Size = new System.Drawing.Size(434, 24);
             this.menuStrip1.TabIndex = 0;
             this.menuStrip1.Text = "menuStrip1";
             // 
@@ -82,20 +83,36 @@
             // 
             this.BookOverview.AllowUserToAddRows = false;
             this.BookOverview.AllowUserToDeleteRows = false;
+            this.BookOverview.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.BookOverview.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.BookOverview.Location = new System.Drawing.Point(12, 27);
             this.BookOverview.MultiSelect = false;
             this.BookOverview.Name = "BookOverview";
             this.BookOverview.ReadOnly = true;
-            this.BookOverview.Size = new System.Drawing.Size(240, 150);
+            this.BookOverview.Size = new System.Drawing.Size(410, 248);
             this.BookOverview.TabIndex = 2;
             this.BookOverview.DoubleClick += new System.EventHandler(this.BookOverview_DoubleClick);
+            // 
+            // AddBook
+            // 
+            this.AddBook.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this.AddBook.Location = new System.Drawing.Point(347, 281);
+            this.AddBook.Name = "AddBook";
+            this.AddBook.Size = new System.Drawing.Size(75, 23);
+            this.AddBook.TabIndex = 3;
+            this.AddBook.Text = "Add Book";
+            this.AddBook.UseVisualStyleBackColor = true;
+            this.AddBook.Click += new System.EventHandler(this.AddBook_Click);
             // 
             // BookView
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(284, 261);
+            this.AutoSize = true;
+            this.ClientSize = new System.Drawing.Size(434, 311);
+            this.Controls.Add(this.AddBook);
             this.Controls.Add(this.BookOverview);
             this.Controls.Add(this.menuStrip1);
             this.MainMenuStrip = this.menuStrip1;
@@ -118,6 +135,7 @@
         private System.Windows.Forms.ToolStripMenuItem membersToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem showAllToolStripMenuItem;
         private System.Windows.Forms.DataGridView BookOverview;
+        private System.Windows.Forms.Button AddBook;
     }
 }
 

@@ -20,7 +20,7 @@ namespace CGKSBibliothouris
         {
             var memberService = new MemberService(new MemberRepository());
             var memberController = new MemberController(new MemberView(), memberService);
-            BookController bookController = new BookController(new BookView(), memberController);
+            BookController bookController = new BookController(new BookView(), memberController, new BookDetails());
             bookController.ShowView();
         }
     }
