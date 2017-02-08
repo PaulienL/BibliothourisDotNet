@@ -59,7 +59,11 @@ namespace CGKSBibliothouris.View
 
         internal void ShowBookDetails(Book book)
         {
-            throw new NotImplementedException();
+            txtId.DataBindings.Add("Text", book, "Id");
+            txtIsbn.DataBindings.Add("Text", book, "Isbn");
+            txtTitle.DataBindings.Add("Text", book, "Title");
+            txtFirstName.DataBindings.Add("Text", book, "FirstName");
+            txtLastName.DataBindings.Add("Text", book, "LastName");
         }
     }
 }
