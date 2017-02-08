@@ -60,6 +60,12 @@
     <Compile Include="Model\DomainModels\Person.cs" />
     <Compile Include="Model\Repositories\BookRepository.cs" />
     <Compile Include="Controller\BookController.cs" />
+    <Compile Include="View\BookDetails.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\BookDetails.Designer.cs">
+      <DependentUpon>BookDetails.cs</DependentUpon>
+    </Compile>
     <Compile Include="View\BookView.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -86,6 +92,9 @@
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="View\BookDetails.resx">
+      <DependentUpon>BookDetails.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="View\BookView.resx">
       <DependentUpon>BookView.cs</DependentUpon>
     </EmbeddedResource>

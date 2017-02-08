@@ -25,7 +25,6 @@ namespace CGKSBibliothouris.Controller
         {
             LoadAllMembers();
             memberView.ShowDialog();
-
         }
 
         private void LoadAllMembers()

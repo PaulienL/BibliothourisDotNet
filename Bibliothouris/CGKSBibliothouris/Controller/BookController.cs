@@ -2,7 +2,6 @@
 using System.Collections.Generic;
 using CGKSBibliothouris.Controller;
 using CGKSBibliothouris.Model.DomainModels;
-using CGKSBibliothouris.Controller; 
 
 namespace CGKSBibliothouris.Controller
 {
@@ -39,6 +38,11 @@ namespace CGKSBibliothouris.Controller
         public void ShowMembers()
         {
             memberController.ShowView();
+        }
+
+        public void ShowDetailsBook(int id)
+        {
+            
         }
     }
 }
