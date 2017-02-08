@@ -34,6 +34,7 @@
             this.membersToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.showAllToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.BookOverview = new System.Windows.Forms.DataGridView();
+            this.AddBook = new System.Windows.Forms.Button();
             this.menuStrip1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.BookOverview)).BeginInit();
             this.SuspendLayout();
@@ -74,7 +75,7 @@
             // showAllToolStripMenuItem
             // 
             this.showAllToolStripMenuItem.Name = "showAllToolStripMenuItem";
-            this.showAllToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.showAllToolStripMenuItem.Size = new System.Drawing.Size(120, 22);
             this.showAllToolStripMenuItem.Text = "Show All";
             this.showAllToolStripMenuItem.Click += new System.EventHandler(this.MembersShow_Click);
             // 
@@ -89,15 +90,26 @@
             this.BookOverview.Size = new System.Drawing.Size(240, 150);
             this.BookOverview.TabIndex = 2;
             // 
-            // frmBookView
+            // AddBook
+            // 
+            this.AddBook.Location = new System.Drawing.Point(84, 210);
+            this.AddBook.Name = "AddBook";
+            this.AddBook.Size = new System.Drawing.Size(75, 23);
+            this.AddBook.TabIndex = 3;
+            this.AddBook.Text = "Add Book";
+            this.AddBook.UseVisualStyleBackColor = true;
+            this.AddBook.Click += new System.EventHandler(this.AddBook_Click);
+            // 
+            // BookView
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(284, 261);
+            this.Controls.Add(this.AddBook);
             this.Controls.Add(this.BookOverview);
             this.Controls.Add(this.menuStrip1);
             this.MainMenuStrip = this.menuStrip1;
-            this.Name = "frmBookView";
+            this.Name = "BookView";
             this.Text = "Books";
             this.Load += new System.EventHandler(this.frmBookView_Load);
             this.menuStrip1.ResumeLayout(false);
@@ -116,6 +128,7 @@
         private System.Windows.Forms.ToolStripMenuItem membersToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem showAllToolStripMenuItem;
         private System.Windows.Forms.DataGridView BookOverview;
+        private System.Windows.Forms.Button AddBook;
     }
 }
 

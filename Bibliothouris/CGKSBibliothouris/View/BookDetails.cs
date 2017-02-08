@@ -7,11 +7,14 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using CGKSBibliothouris.Controller;
 
 namespace CGKSBibliothouris.View
 {
     public partial class BookDetails : Form
     {
+        private BookController bookController;
+
         public BookDetails()
         {
             InitializeComponent();
@@ -33,6 +36,24 @@ namespace CGKSBibliothouris.View
             txtTitle.Enabled = true;
             txtFirstName.Enabled = true;
             txtLastName.Enabled = true;
+        }
+
+        internal void AddController(BookController bookController)
+        {
+            this.bookController = bookController;
+        }
+
+        private void btnSave_Click(object sender, EventArgs e)
+        {
+            bookController.CreateBook(txtFirstName.Text, txtLastName.Text, txtTitle.Text, txtIsbn.Text);
+        }
+
+        internal void Clear()
+        {
+            txtIsbn.Clear();
+            txtTitle.Clear();
+            txtFirstName.Clear();
+            txtLastName.Clear(); 
         }
     }
 }

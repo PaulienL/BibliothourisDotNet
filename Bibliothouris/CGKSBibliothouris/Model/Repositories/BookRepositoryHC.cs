@@ -20,9 +20,9 @@ namespace CGKSBibliothouris
             books.Add(new Book("harrypotter", new Author("JK", "Rowling"), "123456")); 
         }
 
-        public Book CreateBook(Book book)
+        public void AddBook(Book book)
         {
-            throw new NotImplementedException();
+            books.Add(book); 
         }
 
         public void DeleteBook(int id)

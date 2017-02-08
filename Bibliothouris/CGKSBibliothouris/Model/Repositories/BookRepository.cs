@@ -9,7 +9,7 @@ namespace CGKSBibliothouris.Model.Repositories
 {
     interface IBookRepository
     {
-        Book CreateBook(Book book);
+        void AddBook(Book book);
         Book ReadBook(int id);
         void UpdateBook(Book bookToUpdate);
         void DeleteBook(int id);

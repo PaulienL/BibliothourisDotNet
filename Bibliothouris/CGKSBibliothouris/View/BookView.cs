@@ -33,12 +33,19 @@ namespace CGKSBibliothouris
 
         public void UpdateDataInLstBook(List<Book> listOfBooks)
         {
-            BookOverview.DataSource = listOfBooks;            
+            BookOverview.DataSource = typeof(List<Book>);
+            BookOverview.DataSource = listOfBooks;
+            BookOverview.Refresh();
         }
 
         private void MembersShow_Click(object sender, EventArgs e)
         {
             bookcontroller.ShowMembers();
+        }
+
+        private void AddBook_Click(object sender, EventArgs e)
+        {
+            bookcontroller.AddBookView(); 
         }
     }
 }
