@@ -18,10 +18,9 @@ namespace CGKSBibliothouris
         [STAThread]
         static void Main()
         {
-            /*Application.EnableVisualStyles();
+            Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new Form1());*/
-            new MemberController(new MemberView(), new MemberService(new MemberRepository())).ShowView();
+            Application.Run(new frmBookView());
         }
     }
 }
