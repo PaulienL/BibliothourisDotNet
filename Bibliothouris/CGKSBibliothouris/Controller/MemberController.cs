@@ -9,7 +9,7 @@ using CGKSBibliothouris.View;
 
 namespace CGKSBibliothouris.Controller
 {
-    internal class MemberController : Controller
+    public class MemberController : Controller
     {
         private MemberView memberView;
         private MemberService memberService;

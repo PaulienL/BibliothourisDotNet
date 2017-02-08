@@ -12,7 +12,7 @@ using CGKSBibliothouris.Model.DomainModels;
 
 namespace CGKSBibliothouris.View
 {
-    internal partial class BookDetails : Form
+    public partial class BookDetails : Form
     {
         private BookController bookController;
 

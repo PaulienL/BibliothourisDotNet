@@ -7,7 +7,7 @@ using CGKSBibliothouris.Model.DomainModels;
 
 namespace CGKSBibliothouris.Model.Repositories
 {
-    class MemberRepository
+    public class MemberRepository
     {
         private readonly List<Member> members = new List<Member>() {new Member("William", "Alegria"),new Member("Seppe", "Gielen")};
 

@@ -8,7 +8,7 @@ using CGKSBibliothouris.Model.Repositories;
 
 namespace CGKSBibliothouris.Model.Services
 {
-    class MemberService
+    public class MemberService
     {
         private MemberRepository memberRepository;
 
