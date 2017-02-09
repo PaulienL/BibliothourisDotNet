@@ -10,35 +10,12 @@ namespace CGKSBibliothouris.Model.DomainModels
    
     public class Member : Person
     {
-        [Required]
-        [Key]
-        public string Inss { get; set; } 
-        public Address Address { get; set; }
+        
 
-        public Member(string firstName, string lastName, string inss, Address address) 
-            : base(firstName, lastName)
+        public Member(string firstName, string lastName, string inss, Address address, string password) 
+            : base(inss, firstName, lastName, password, "Member", address)
         {
-            Inss = inss;
             Address = address;
         }
-    }
-
-    
-    public class Address
-    {
-        public string Street { get; set; }
-        [Required]
-        public string City { get; set; }
-        public int Number { get; set; }
-        public int Zipcode { get; set; }
-
-        public Address(string street, string city, int number, int zipcode)
-        {
-            Street = street;
-            City = city;
-            Number = number;
-            Zipcode = zipcode;
-        }
-
     }
 }

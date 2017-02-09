@@ -20,7 +20,7 @@ namespace CGKSBibliothouris.View
             InitializeComponent();
         }
 
-        internal void AddMembers(List<Member> members)
+        internal void AddMembers(List<Person> members)
         {
             foreach (var member in members)
             {

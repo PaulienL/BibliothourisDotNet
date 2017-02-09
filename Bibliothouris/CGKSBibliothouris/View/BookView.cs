@@ -61,5 +61,23 @@ namespace CGKSBibliothouris
             SearchBookView search = new SearchBookView(bookcontroller);
             search.ShowDialog();
         }
+
+        public void SetRights(string personRole)
+        {
+            if (personRole.ToUpper().Equals("MEMBER"))
+            {
+                mnMembers.Visible = false;
+                miBooksAdd.Visible = false;
+                AddBook.Visible = false;
+                mnRentals.Visible = false;
+            }
+            else
+            {
+                mnMembers.Visible = true;
+                miBooksAdd.Visible = true;
+                AddBook.Visible = true;
+                mnRentals.Visible = true;
+            }
+        }
     }
 }

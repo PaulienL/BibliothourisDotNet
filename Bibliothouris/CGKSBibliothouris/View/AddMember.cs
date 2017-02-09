@@ -77,7 +77,7 @@ namespace CGKSBibliothouris.View
 
         private void saveMember_Click(object sender, EventArgs e)
         {
-        membercontroller.CreateNewMember(firstName.Text, lastName.Text, street.Text, int.Parse(number.Text), int.Parse(zipcode.Text), city.Text, inss.Text);
+        membercontroller.CreateNewMember(firstName.Text, lastName.Text, street.Text, int.Parse(number.Text), int.Parse(zipcode.Text), city.Text, inss.Text, password.Text);
         }
 
         public void Clear()

@@ -45,6 +45,8 @@
             this.inssField = new System.Windows.Forms.Label();
             this.inss = new System.Windows.Forms.TextBox();
             this.saveMember = new System.Windows.Forms.Button();
+            this.password = new System.Windows.Forms.TextBox();
+            this.label5 = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // firstName
@@ -175,7 +177,7 @@
             // 
             // saveMember
             // 
-            this.saveMember.Location = new System.Drawing.Point(156, 218);
+            this.saveMember.Location = new System.Drawing.Point(156, 264);
             this.saveMember.Name = "saveMember";
             this.saveMember.Size = new System.Drawing.Size(75, 23);
             this.saveMember.TabIndex = 15;
@@ -183,11 +185,30 @@
             this.saveMember.UseVisualStyleBackColor = true;
             this.saveMember.Click += new System.EventHandler(this.saveMember_Click);
             // 
+            // password
+            // 
+            this.password.Location = new System.Drawing.Point(113, 203);
+            this.password.Name = "password";
+            this.password.PasswordChar = '*';
+            this.password.Size = new System.Drawing.Size(118, 20);
+            this.password.TabIndex = 17;
+            // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.Location = new System.Drawing.Point(25, 210);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(53, 13);
+            this.label5.TabIndex = 16;
+            this.label5.Text = "Password";
+            // 
             // AddMember
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(284, 261);
+            this.ClientSize = new System.Drawing.Size(284, 299);
+            this.Controls.Add(this.password);
+            this.Controls.Add(this.label5);
             this.Controls.Add(this.saveMember);
             this.Controls.Add(this.inss);
             this.Controls.Add(this.inssField);
@@ -229,5 +250,7 @@
         private System.Windows.Forms.Label inssField;
         private System.Windows.Forms.TextBox inss;
         private System.Windows.Forms.Button saveMember;
+        private System.Windows.Forms.TextBox password;
+        private System.Windows.Forms.Label label5;
     }
 }

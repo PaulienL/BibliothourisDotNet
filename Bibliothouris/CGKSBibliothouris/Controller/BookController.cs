@@ -104,5 +104,10 @@ namespace CGKSBibliothouris.Controller
                 result.ShowDialog();
             }
         }
+
+        public void SetAccesRights(Person person)
+        {
+            bookView.SetRights(person.Role);
+        }
     }
 }
