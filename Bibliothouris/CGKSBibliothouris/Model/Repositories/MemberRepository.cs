@@ -15,5 +15,10 @@ namespace CGKSBibliothouris.Model.Repositories
         {
             return members;
         }
+
+        public void AddMember(string firstName, string lastName, string inss, Address address)
+        {
+            members.Add(new Member(firstName, lastName, inss, address)); 
+        }
     }
 }

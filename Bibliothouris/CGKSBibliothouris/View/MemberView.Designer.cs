@@ -32,6 +32,7 @@
             this.ID = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.Firstname = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.Lastname = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.addMember = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // memberList
@@ -42,7 +43,7 @@
             this.Lastname});
             this.memberList.Location = new System.Drawing.Point(12, 12);
             this.memberList.Name = "memberList";
-            this.memberList.Size = new System.Drawing.Size(260, 237);
+            this.memberList.Size = new System.Drawing.Size(252, 206);
             this.memberList.TabIndex = 0;
             this.memberList.UseCompatibleStateImageBehavior = false;
             this.memberList.View = System.Windows.Forms.View.Details;
@@ -59,11 +60,22 @@
             // 
             this.Lastname.Text = "Lastname";
             // 
+            // addMember
+            // 
+            this.addMember.Location = new System.Drawing.Point(186, 224);
+            this.addMember.Name = "addMember";
+            this.addMember.Size = new System.Drawing.Size(75, 23);
+            this.addMember.TabIndex = 1;
+            this.addMember.Text = "Add Member";
+            this.addMember.UseVisualStyleBackColor = true;
+            this.addMember.Click += new System.EventHandler(this.addMember_Click_1);
+            // 
             // MemberView
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(284, 261);
+            this.Controls.Add(this.addMember);
             this.Controls.Add(this.memberList);
             this.Name = "MemberView";
             this.Text = "MemberView";
@@ -77,5 +89,6 @@
         private System.Windows.Forms.ColumnHeader ID;
         private System.Windows.Forms.ColumnHeader Firstname;
         private System.Windows.Forms.ColumnHeader Lastname;
+        private System.Windows.Forms.Button addMember;
     }
 }

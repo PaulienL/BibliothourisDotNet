@@ -32,9 +32,25 @@ namespace CGKSBibliothouris.View
             
         }
 
+        internal void AddMember(Member member)
+        {
+            {
+                ListViewItem memberItem = new ListViewItem(member.Id.ToString());
+                memberItem.SubItems.Add(member.FirstName);
+                memberItem.SubItems.Add(member.LastName);
+                memberList.Items.Add(memberItem);
+            }
+        }
+
         internal void AddMemberController(MemberController memberController)
         {
             this.memberController = memberController;
+        }
+
+        private void addMember_Click_1(object sender, EventArgs e)
+        {
+            memberController.AddMemberView();
+
         }
     }
 }
