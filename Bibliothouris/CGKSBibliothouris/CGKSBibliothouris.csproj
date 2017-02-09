@@ -53,6 +53,7 @@
     <Compile Include="Model\DomainModels\MemberValidator.cs" />
     <Compile Include="Model\DomainModels\Rental.cs" />
     <Compile Include="Model\Repositories\BookRepositoryHC.cs" />
+    <Compile Include="Model\Repositories\RentalRepository.cs" />
     <Compile Include="Model\Services\BookService.cs" />
     <Compile Include="Controller\Controller.cs" />
     <Compile Include="Controller\MemberController.cs" />

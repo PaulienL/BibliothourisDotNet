@@ -34,7 +34,7 @@ namespace CGKSBibliothouris
 
         public void DeleteBook(int id)
         {
-            throw new NotImplementedException();
+            
         }
 
         public List<Book> ReadAllBooks()
@@ -93,5 +93,7 @@ namespace CGKSBibliothouris
         {
             return searchFor.Replace("*", ".*");
         }
+
+      
     }
 }
