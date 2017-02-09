@@ -7,11 +7,12 @@ using System.Threading.Tasks;
 
 namespace CGKSBibliothouris.Model.DomainModels
 {
+   
     public class Member : Person
     {
         [Required]
         [Key]
-        public string Inss { get; set; }
+        public string Inss { get; set; } 
         public Address Address { get; set; }
 
         public Member(string firstName, string lastName, string inss, Address address) 
@@ -22,6 +23,7 @@ namespace CGKSBibliothouris.Model.DomainModels
         }
     }
 
+    
     public class Address
     {
         public string Street { get; set; }
@@ -37,5 +39,6 @@ namespace CGKSBibliothouris.Model.DomainModels
             Number = number;
             Zipcode = zipcode;
         }
+
     }
 }
