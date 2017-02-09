@@ -16,5 +16,6 @@ namespace CGKSBibliothouris.Model.Repositories
 
         List<Book> ReadAllBooks();
         List<Book> SearchByTitle(string searchFor);
+        List<Book> SearchByAuthor(string searchFor);
     }
 }

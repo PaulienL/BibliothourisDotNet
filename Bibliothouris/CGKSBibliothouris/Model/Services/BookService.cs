@@ -71,8 +71,9 @@ namespace CGKSBibliothouris
         }
 
         private class AuthorSearch : IBookSearchStrategy {
-            public List<Book> SearchBooks(string searchFor, IBookRepository repo) {
-                throw new NotImplementedException();
+            public List<Book> SearchBooks(string searchFor, IBookRepository repo)
+            {
+                return repo.SearchByAuthor(searchFor);
             }
         }
 
