@@ -7,6 +7,7 @@ using System.Windows.Forms;
 using CGKSBibliothouris.Model.DomainModels;
 using CGKSBibliothouris.Model.Services;
 using CGKSBibliothouris.View;
+using System.ComponentModel.DataAnnotations;
 
 namespace CGKSBibliothouris.Controller
 {
@@ -43,10 +44,17 @@ namespace CGKSBibliothouris.Controller
 
         internal void CreateNewMember(string firstName, string lastName, string street, int number, int zipcode, string city, string inss)
         {
-            memberService.CreateAndAddMember(firstName, lastName, street, number, zipcode ,city,inss);
-            memberView.AddMember(getLastMember());
-            addmember.Close();
-            addmember.Clear();
+            try
+            {
+                memberService.CreateAndAddMember(firstName, lastName, street, number, zipcode, city, inss);
+                memberView.AddMember(new Member(firstName, lastName, inss, new Address(street, city, number, zipcode)));
+                addmember.Close();
+                addmember.Clear();
+            }
+            catch (ValidationException ex)
+            {
+                Console.WriteLine(ex.Message);
+            }
         }
 
         internal Member getLastMember()

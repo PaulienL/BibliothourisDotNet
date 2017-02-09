@@ -52,5 +52,10 @@ namespace CGKSBibliothouris.View
             memberController.AddMemberView();
 
         }
+
+        internal void UpdateList()
+        {
+            memberList.Refresh();
+        }
     }
 }
