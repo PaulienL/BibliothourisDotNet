@@ -37,6 +37,10 @@ namespace CGKSBibliothouris
             bookrepository.AddBook(new Book(title, new Author(firstName, lastName),  isbn)); 
         }
 
+        public List<Book> SearchBooks(string searchFor) {
+            return strategy.SearchBooks(searchFor, bookrepository);
+        }
+
         public void SetSearchStrategy(SearchStrategy strategy)
         {
             if (strategy.Equals(SearchStrategy.TITLE))
@@ -77,6 +81,8 @@ namespace CGKSBibliothouris
                 throw new NotImplementedException();
             }
         }
+
+        
     }
 
     public enum SearchStrategy {

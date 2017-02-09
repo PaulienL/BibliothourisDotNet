@@ -28,33 +28,38 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.lstSearchResult = new System.Windows.Forms.ListBox();
+            this.BookOverview = new System.Windows.Forms.DataGridView();
+            ((System.ComponentModel.ISupportInitialize)(this.BookOverview)).BeginInit();
             this.SuspendLayout();
             // 
-            // lstSearchResult
+            // BookOverview
             // 
-            this.lstSearchResult.FormattingEnabled = true;
-            this.lstSearchResult.Location = new System.Drawing.Point(13, 13);
-            this.lstSearchResult.MultiColumn = true;
-            this.lstSearchResult.Name = "lstSearchResult";
-            this.lstSearchResult.Size = new System.Drawing.Size(335, 238);
-            this.lstSearchResult.TabIndex = 0;
-            this.lstSearchResult.DoubleClick += new System.EventHandler(this.lstSearchResult_DoubleClick);
+            this.BookOverview.AllowUserToAddRows = false;
+            this.BookOverview.AllowUserToDeleteRows = false;
+            this.BookOverview.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.AllCells;
+            this.BookOverview.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.BookOverview.Location = new System.Drawing.Point(12, 12);
+            this.BookOverview.Name = "BookOverview";
+            this.BookOverview.ReadOnly = true;
+            this.BookOverview.Size = new System.Drawing.Size(391, 247);
+            this.BookOverview.TabIndex = 0;
+            this.BookOverview.DoubleClick += new System.EventHandler(this.BookOverview_DoubleClick);
             // 
             // BookSearchResults
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(415, 271);
-            this.Controls.Add(this.lstSearchResult);
+            this.Controls.Add(this.BookOverview);
             this.Name = "BookSearchResults";
             this.Text = "BookSearchResults";
+            ((System.ComponentModel.ISupportInitialize)(this.BookOverview)).EndInit();
             this.ResumeLayout(false);
 
         }
 
         #endregion
 
-        private System.Windows.Forms.ListBox lstSearchResult;
+        private System.Windows.Forms.DataGridView BookOverview;
     }
 }

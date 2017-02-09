@@ -19,7 +19,9 @@ namespace CGKSBibliothouris
 
         private void InitRepo()
         {
-            books.Add(new Book("harrypotter", new Author("JK", "Rowling"), "123456")); 
+            books.Add(new Book("harrypotter", new Author("JK", "Rowling"), "123456"));
+            books.Add(new Book("50 Shades of Grey", new Author("I", "Don'r know"),"123" ));
+            books.Add(new Book("50 Shades Darker", new Author("I", "Don't know"), "234"));
         }
 
         public void AddBook(Book book)
@@ -54,7 +56,6 @@ namespace CGKSBibliothouris
                 return new List<Book>();
             }
             string strRegex = searchFor.Replace("*", ".*");
-            Regex regex = new Regex(strRegex);
             return books.Where<Book>(book =>
             {
                 Match match = Regex.Match(book.Title, strRegex);

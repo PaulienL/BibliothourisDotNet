@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Linq;
 using CGKSBibliothouris.Controller;
 using CGKSBibliothouris.Model.DomainModels;
 using CGKSBibliothouris.View;
@@ -71,6 +72,26 @@ namespace CGKSBibliothouris.Controller
             if (SearchStrategy.TryParse(stratString, true, out strategy))
             {
                 bookservice.SetSearchStrategy(strategy);
+            }
+        }
+
+        public void SearchBook(string searchFor)
+        {
+            List<Book> searchResult = bookservice.SearchBooks(searchFor);
+            if (searchResult.Count == 1)
+            {
+                BookDetails result = new BookDetails();
+                result.SetFieldReadOnly();
+                result.AddController(this);
+                result.ShowBookDetails(searchResult.ElementAt(0));
+                result.ShowDialog();
+            }
+            else
+            {
+                BookSearchResults result = new BookSearchResults();
+                result.AddController(this);
+                result.UpdateDataInLstBook(searchResult);
+                result.ShowDialog();
             }
         }
     }
