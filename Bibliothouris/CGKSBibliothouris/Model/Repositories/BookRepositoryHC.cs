@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Runtime.Remoting.Messaging;
 using System.Text.RegularExpressions;
 using CGKSBibliothouris.Model.DomainModels;
 using CGKSBibliothouris.Model.Repositories;
@@ -76,6 +77,15 @@ namespace CGKSBibliothouris
                 string lastNameFirstName = string.Format("{0} {1}", book.LastName, book.FirstName);
                 return Regex.IsMatch(firstNameLastName, strRegex) || Regex.IsMatch(lastNameFirstName, strRegex);
             }).ToList();
+        }
+
+        public List<Book> SearchByISBN(string searchFor)
+        {
+            if (searchFor == null || searchFor.Length == 0) {
+                return new List<Book>();
+            }
+            var strRegex = ConvertToRegex(searchFor);
+            return books.Where<Book>(book => Regex.IsMatch(book.Isbn, strRegex)).ToList();
         }
 
         private string ConvertToRegex(string searchFor)
