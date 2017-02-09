@@ -57,16 +57,18 @@
             // rdbTitle
             // 
             this.rdbTitle.AutoSize = true;
+            this.rdbTitle.Checked = true;
             this.rdbTitle.Location = new System.Drawing.Point(15, 18);
             this.rdbTitle.Name = "rdbTitle";
             this.rdbTitle.Size = new System.Drawing.Size(45, 17);
             this.rdbTitle.TabIndex = 2;
+            this.rdbTitle.TabStop = true;
             this.rdbTitle.Text = "Title";
             this.rdbTitle.UseVisualStyleBackColor = true;
+            this.rdbTitle.CheckedChanged += new System.EventHandler(this.RadioButtons_CheckedChanged);
             // 
             // rdbAuthor
             // 
-            this.rdbAuthor.AutoCheck = false;
             this.rdbAuthor.AutoSize = true;
             this.rdbAuthor.Location = new System.Drawing.Point(66, 18);
             this.rdbAuthor.Name = "rdbAuthor";
@@ -74,6 +76,7 @@
             this.rdbAuthor.TabIndex = 3;
             this.rdbAuthor.Text = "Author";
             this.rdbAuthor.UseVisualStyleBackColor = true;
+            this.rdbAuthor.CheckedChanged += new System.EventHandler(this.RadioButtons_CheckedChanged);
             // 
             // rdnIsbn
             // 
@@ -84,6 +87,7 @@
             this.rdnIsbn.TabIndex = 5;
             this.rdnIsbn.Text = "ISBN";
             this.rdnIsbn.UseVisualStyleBackColor = true;
+            this.rdnIsbn.CheckedChanged += new System.EventHandler(this.RadioButtons_CheckedChanged);
             // 
             // btnSearch
             // 
@@ -115,7 +119,7 @@
             this.Controls.Add(this.txtSearch);
             this.Controls.Add(this.label1);
             this.Name = "SearchBookView";
-            this.Text = "SearchBookView";
+            this.Text = "Search Books";
             this.Load += new System.EventHandler(this.SearchBookView_Load);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();

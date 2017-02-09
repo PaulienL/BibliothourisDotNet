@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Text.RegularExpressions;
 using CGKSBibliothouris.Model.DomainModels;
 using CGKSBibliothouris.Model.Repositories;
 
@@ -18,7 +19,9 @@ namespace CGKSBibliothouris
 
         private void InitRepo()
         {
-            books.Add(new Book("harrypotter", new Author("JK", "Rowling"), "123456")); 
+            books.Add(new Book("harrypotter", new Author("JK", "Rowling"), "123456"));
+            books.Add(new Book("50 Shades of Grey", new Author("I", "Don'r know"),"123" ));
+            books.Add(new Book("50 Shades Darker", new Author("I", "Don't know"), "234"));
         }
 
         public void AddBook(Book book)
@@ -44,6 +47,20 @@ namespace CGKSBibliothouris
         public void UpdateBook(Book bookToUpdate)
         {
             throw new NotImplementedException();
+        }
+
+        public List<Book> SearchByTitle(string searchFor)
+        {
+            if (searchFor == null || searchFor.Length == 0)
+            {
+                return new List<Book>();
+            }
+            string strRegex = searchFor.Replace("*", ".*");
+            return books.Where<Book>(book =>
+            {
+                Match match = Regex.Match(book.Title, strRegex);
+                return match.Success;
+            }).ToList();
         }
     }
 }

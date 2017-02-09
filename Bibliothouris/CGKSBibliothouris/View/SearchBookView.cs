@@ -27,17 +27,15 @@ namespace CGKSBibliothouris.View
 
         private void btnSearch_Click(object sender, EventArgs e)
         {
-            if (rdbAuthor.Checked)
+            controller.SearchBook(txtSearch.Text);
+        }
+
+        private void RadioButtons_CheckedChanged(object sender, EventArgs e)
+        {
+            if (((RadioButton) sender).Checked)
             {
-                //controller.SearchByAuthor(txtSearch.Text);
-            }
-            if (rdbTitle.Checked)
-            {
-                //controller.SearchByTitle(txtSearch.Text);
-            }
-            if (rdnIsbn.Checked)
-            {
-                
+                RadioButton rb = (RadioButton) sender;
+                controller.SetSearchStrategy(rb.Text);
             }
         }
     }
