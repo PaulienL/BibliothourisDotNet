@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace CGKSBibliothouris.Model.Repositories
 {
-    interface IBookRepository
+    public interface IBookRepository
     {
         void AddBook(Book book);
         Book ReadBook(int id);

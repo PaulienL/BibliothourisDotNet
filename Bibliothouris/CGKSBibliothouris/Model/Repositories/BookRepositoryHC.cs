@@ -6,7 +6,7 @@ using CGKSBibliothouris.Model.Repositories;
 
 namespace CGKSBibliothouris
 {
-    internal class BookRepositoryHC : IBookRepository
+    public class BookRepositoryHC : IBookRepository
     {
         private List<Book> books;
 

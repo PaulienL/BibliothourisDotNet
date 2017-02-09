@@ -6,7 +6,7 @@ using CGKSBibliothouris.View;
 
 namespace CGKSBibliothouris.Controller
 {
-    internal class BookController : Controller
+    public class BookController : Controller
     {
         public MemberController memberController;
         private BookService bookservice;
