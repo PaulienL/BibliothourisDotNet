@@ -174,6 +174,7 @@
             // 
             // AddBook
             // 
+            this.AddBook.AccessibleRole = System.Windows.Forms.AccessibleRole.PushButton;
             this.AddBook.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.AddBook.Location = new System.Drawing.Point(347, 281);
             this.AddBook.Name = "AddBook";
@@ -182,7 +183,6 @@
             this.AddBook.Text = "Add Book";
             this.AddBook.UseVisualStyleBackColor = true;
             this.AddBook.Click += new System.EventHandler(this.AddBook_Click);
-            this.AddBook.Enabled = false;
             // 
             // BookView
             // 

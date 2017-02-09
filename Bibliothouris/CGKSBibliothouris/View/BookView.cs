@@ -66,17 +66,17 @@ namespace CGKSBibliothouris
         {
             if (personRole.ToUpper().Equals("MEMBER"))
             {
-                mnMembers.Visible = false;
-                miBooksAdd.Visible = false;
-                AddBook.Visible = false;
-                mnRentals.Visible = false;
+                mnMembers.Enabled = false;
+                miBooksAdd.Enabled = false;
+                AddBook.Enabled = false;
+                mnRentals.Enabled = false;
             }
             else
             {
-                mnMembers.Visible = true;
-                miBooksAdd.Visible = true;
-                AddBook.Visible = true;
-                mnRentals.Visible = true;
+                mnMembers.Enabled = true;
+                miBooksAdd.Enabled = true;
+                AddBook.Enabled = true;
+                mnRentals.Enabled = true;
             }
         }
     }
