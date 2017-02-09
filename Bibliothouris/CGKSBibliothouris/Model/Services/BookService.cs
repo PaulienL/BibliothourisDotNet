@@ -3,6 +3,8 @@ using CGKSBibliothouris.Model.Repositories;
 using System;
 using System.Collections;
 using System.Collections.Generic;
+using System.ComponentModel.DataAnnotations;
+using System.Text;
 
 namespace CGKSBibliothouris
 {
@@ -34,7 +36,18 @@ namespace CGKSBibliothouris
 
         public void CreateAndAddBook(string firstName, string lastName, string title, string isbn)
         {
-            bookrepository.AddBook(new Book(title, new Author(firstName, lastName),  isbn)); 
+            var book = new Book(title, new Author(firstName, lastName), isbn);
+            List<ValidationResult> errors = new List<ValidationResult>();
+            if (!Validator.TryValidateObject(book, new ValidationContext(book), errors))
+            {
+                StringBuilder errorMsg = new StringBuilder();
+                foreach (var validationResult in errors)
+                {
+                    errorMsg.AppendLine(validationResult.ErrorMessage);
+                }
+                throw new ValidationException(errorMsg.ToString());
+            }
+            bookrepository.AddBook(book); 
         }
 
         public List<Book> SearchBooks(string searchFor) {
