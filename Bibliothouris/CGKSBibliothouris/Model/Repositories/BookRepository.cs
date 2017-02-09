@@ -15,5 +15,6 @@ namespace CGKSBibliothouris.Model.Repositories
         void DeleteBook(int id);
 
         List<Book> ReadAllBooks();
+        List<Book> SearchByTitle(string searchFor);
     }
 }

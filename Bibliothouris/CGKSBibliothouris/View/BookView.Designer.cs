@@ -35,6 +35,8 @@
             this.showAllToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.BookOverview = new System.Windows.Forms.DataGridView();
             this.AddBook = new System.Windows.Forms.Button();
+            this.booksToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.searchToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.BookOverview)).BeginInit();
             this.SuspendLayout();
@@ -43,7 +45,8 @@
             // 
             this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.programToolStripMenuItem,
-            this.membersToolStripMenuItem});
+            this.membersToolStripMenuItem,
+            this.booksToolStripMenuItem});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
             this.menuStrip1.Size = new System.Drawing.Size(434, 24);
@@ -106,6 +109,21 @@
             this.AddBook.UseVisualStyleBackColor = true;
             this.AddBook.Click += new System.EventHandler(this.AddBook_Click);
             // 
+            // booksToolStripMenuItem
+            // 
+            this.booksToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.searchToolStripMenuItem});
+            this.booksToolStripMenuItem.Name = "booksToolStripMenuItem";
+            this.booksToolStripMenuItem.Size = new System.Drawing.Size(51, 20);
+            this.booksToolStripMenuItem.Text = "Books";
+            // 
+            // searchToolStripMenuItem
+            // 
+            this.searchToolStripMenuItem.Name = "searchToolStripMenuItem";
+            this.searchToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.searchToolStripMenuItem.Text = "Search...";
+            this.searchToolStripMenuItem.Click += new System.EventHandler(this.searchToolStripMenuItem_Click);
+            // 
             // BookView
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -136,6 +154,8 @@
         private System.Windows.Forms.ToolStripMenuItem showAllToolStripMenuItem;
         private System.Windows.Forms.DataGridView BookOverview;
         private System.Windows.Forms.Button AddBook;
+        private System.Windows.Forms.ToolStripMenuItem booksToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem searchToolStripMenuItem;
     }
 }
 

@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Text.RegularExpressions;
 using CGKSBibliothouris.Model.DomainModels;
 using CGKSBibliothouris.Model.Repositories;
 
@@ -44,6 +45,21 @@ namespace CGKSBibliothouris
         public void UpdateBook(Book bookToUpdate)
         {
             throw new NotImplementedException();
+        }
+
+        public List<Book> SearchByTitle(string searchFor)
+        {
+            if (searchFor == null || searchFor.Length == 0)
+            {
+                return new List<Book>();
+            }
+            string strRegex = searchFor.Replace("*", ".*");
+            Regex regex = new Regex(strRegex);
+            return books.Where<Book>(book =>
+            {
+                Match match = Regex.Match(book.Title, strRegex);
+                return match.Success;
+            }).ToList();
         }
     }
 }

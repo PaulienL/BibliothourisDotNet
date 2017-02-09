@@ -40,5 +40,14 @@ namespace CGKSBibliothouris.View
                 
             }
         }
+
+        private void RadioButtons_CheckedChanged(object sender, EventArgs e)
+        {
+            if (((RadioButton) sender).Checked)
+            {
+                RadioButton rb = (RadioButton) sender;
+                controller.SetSearchStrategy(rb.Text);
+            }
+        }
     }
 }

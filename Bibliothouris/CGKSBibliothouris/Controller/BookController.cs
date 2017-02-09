@@ -64,6 +64,14 @@ namespace CGKSBibliothouris.Controller
             bookDetails.SetFieldsEditable(); 
             bookDetails.ShowDialog(); 
         }
- 
+
+        public void SetSearchStrategy(string stratString)
+        {
+            SearchStrategy strategy;
+            if (SearchStrategy.TryParse(stratString, true, out strategy))
+            {
+                bookservice.SetSearchStrategy(strategy);
+            }
+        }
     }
 }

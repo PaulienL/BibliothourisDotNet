@@ -9,6 +9,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using CGKSBibliothouris.View;
 
 namespace CGKSBibliothouris
 {
@@ -54,6 +55,11 @@ namespace CGKSBibliothouris
         {
             int selectedId = int.Parse(BookOverview.CurrentRow.Cells[0].Value.ToString());
             bookcontroller.ShowDetailsBook(selectedId);
+        }
+
+        private void searchToolStripMenuItem_Click(object sender, EventArgs e) {
+            SearchBookView search = new SearchBookView(bookcontroller);
+            search.ShowDialog();
         }
     }
 }
