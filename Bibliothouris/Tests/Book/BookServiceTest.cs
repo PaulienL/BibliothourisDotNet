@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.ComponentModel.DataAnnotations;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 using CGKSBibliothouris;
 using CGKSBibliothouris.Model.DomainModels;
@@ -32,8 +33,8 @@ namespace Tests
         [TestMethod]
         public void AddBookShouldCallCreateAndAddBookWithBookAsParameter()
         {
-            service.CreateAndAddBook("ik", "test", "test", "123");
-            repo.Received().AddBook(Arg.Is<Book>(x=> x.Isbn.Equals("123") && x.Title.Equals("test") && x.FirstName.Equals("ik") && x.LastName.Equals("test")));
+            service.CreateAndAddBook("ik", "test", "test", "9789024548002");
+            repo.Received().AddBook(Arg.Is<Book>(x=> x.Isbn.Equals("9789024548002") && x.Title.Equals("test") && x.FirstName.Equals("ik") && x.LastName.Equals("test")));
         }
 
         [TestMethod]
@@ -41,6 +42,23 @@ namespace Tests
         {
             service.GetBook(1);
             repo.Received().ReadBook(Arg.Is(1));
+        }
+
+        [TestMethod]
+        public void InvalidIsbnShouldReturnValidationException() {
+            Book book = new Book("a", new Author("b", "c"), "140909155");
+            List<ValidationResult> errors = new List<ValidationResult>();
+            bool valid = Validator.TryValidateObject(book, new ValidationContext(book), errors, true);
+            CollectionAssert.AreNotEqual(new List<ValidationResult>(), errors);
+        }
+
+        [TestMethod]
+        public void ValidIsbnnShouldNotReturnValidationResults()
+        {
+            Book book = new Book("a", new Author("b","c"), "9789024548002");
+            List<ValidationResult> errors = new List<ValidationResult>();
+            bool valid = Validator.TryValidateObject(book, new ValidationContext(book), errors);
+            Assert.IsTrue(valid);
         }
     }
 }

@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.ComponentModel.DataAnnotations;
 using System.Linq;
 using System.Runtime.Remoting.Messaging;
 using System.Text.RegularExpressions;
@@ -20,9 +21,9 @@ namespace CGKSBibliothouris
 
         private void InitRepo()
         {
-            AddBook(new Book("harrypotter", new Author("JK", "Rowling"), "123456"));
-            AddBook(new Book("50 Shades of Grey", new Author("I", "Don'r know"),"123" ));
-            AddBook(new Book("50 Shades Darker", new Author("I", "Don't know"), "234"));
+            AddBook(new Book("harrypotter", new Author("JK", "Rowling"), "1409091155"));
+            AddBook(new Book("50 Shades of Grey", new Author("I", "Don'r know"), "1409091155"));
+            AddBook(new Book("50 Shades Darker", new Author("I", "Don't know"), "1409091155"));
         }
 
         public void AddBook(Book book)

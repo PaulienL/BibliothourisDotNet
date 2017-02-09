@@ -1,6 +1,8 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.ComponentModel.DataAnnotations;
 using System.Linq;
+using System.Windows.Forms;
 using CGKSBibliothouris.Controller;
 using CGKSBibliothouris.Model.DomainModels;
 using CGKSBibliothouris.View;
@@ -47,10 +49,18 @@ namespace CGKSBibliothouris.Controller
 
         internal void CreateBook(string firstName, string lastName, string title, string isbn)
         {
-            bookservice.CreateAndAddBook(firstName, lastName, title, isbn);
-            bookDetails.Close();
-            bookDetails.Clear(); 
-            LoadAllBooks();
+            try
+            {
+                bookservice.CreateAndAddBook(firstName, lastName, title, isbn);
+                bookDetails.Close();
+                bookDetails.Clear();
+                LoadAllBooks();
+            }
+            catch (ValidationException valEx)
+            {
+                MessageBox.Show(valEx.Message, "Error!",
+                     MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
         }
 
         public void ShowDetailsBook(int id)

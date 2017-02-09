@@ -23,12 +23,8 @@ namespace CGKSBibliothouris.Tests {
         [TestMethod]
         public void SearchByTitleSearchFor_ypo_returnsListWithOneBook()
         {
-            List<Book> books = repo.ReadAllBooks();
             List<Book> result = repo.SearchByTitle("*ypo*");
-
-            CollectionAssert.AreEqual(books, result);
-            CollectionAssert.AreEqual(new List<Book>(), repo.SearchByTitle("50 sh*"));
-            CollectionAssert.AreEqual(new List<Book>(), repo.SearchByTitle(""));
+            Assert.AreEqual(1, result.Count);
         }
     }
 }
