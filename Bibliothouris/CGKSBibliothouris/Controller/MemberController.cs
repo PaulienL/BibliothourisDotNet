@@ -76,14 +76,11 @@ namespace CGKSBibliothouris.Controller
                 {
                     Person p = memberService.GetMember(inss);
                     BookView bv = new BookView();
-                    BookController bc = new BookController(new BookView(), this, new BookDetails());
+                    BookController bc = new BookController(bv, this, new BookDetails());
                     bv.AddController(bc);
-                    
-                    bc.SetAccesRights(p);
-                    bv.ShowDialog();
                     login.Hide();
-                    
-                    
+                    bc.SetAccesRights(p);
+                    bc.ShowMainView();
                 }
             }
             catch (AuthenticationException e)
