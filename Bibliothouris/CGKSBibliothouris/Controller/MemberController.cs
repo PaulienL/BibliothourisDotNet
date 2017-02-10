@@ -21,7 +21,6 @@ namespace CGKSBibliothouris.Controller
         private MemberView memberView;
         private MemberService memberService;
         private AddMember addmember;
-        private Login login;
 
         public MemberController()
         {
@@ -86,12 +85,6 @@ namespace CGKSBibliothouris.Controller
                 MessageBox.Show(e.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Hand);
             }
         }
-
-        /*public void ShowLogin()
-        {
-            login = new Login(mainController);
-            login.ShowDialog();
-        }*/
 
         public void AddMainController()
         {
