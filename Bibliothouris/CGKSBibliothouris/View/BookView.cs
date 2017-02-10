@@ -79,5 +79,11 @@ namespace CGKSBibliothouris
                 mnRentals.Enabled = true;
             }
         }
+
+        private void rentBook_Click(object sender, EventArgs e)
+        {
+            NewRental newRental = new NewRental();
+            newRental.ShowDialog(); 
+        }
     }
 }
