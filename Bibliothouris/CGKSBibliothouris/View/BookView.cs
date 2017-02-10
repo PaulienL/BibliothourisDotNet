@@ -80,9 +80,16 @@ namespace CGKSBibliothouris
             }
         }
 
+<<<<<<< HEAD
         private void miExit_Click(object sender, EventArgs e)
         {
             bookcontroller.Exit();
+=======
+        private void rentBook_Click(object sender, EventArgs e)
+        {
+            NewRental newRental = new NewRental();
+            newRental.ShowDialog(); 
+>>>>>>> 312d14f0946582e487307a59c8945af0ad996188
         }
     }
 }

@@ -44,6 +44,7 @@
             this.miRentalsFindOverdue = new System.Windows.Forms.ToolStripMenuItem();
             this.BookOverview = new System.Windows.Forms.DataGridView();
             this.AddBook = new System.Windows.Forms.Button();
+            this.rentBook = new System.Windows.Forms.Button();
             this.menuStrip1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.BookOverview)).BeginInit();
             this.SuspendLayout();
@@ -188,12 +189,23 @@
             this.AddBook.UseVisualStyleBackColor = true;
             this.AddBook.Click += new System.EventHandler(this.AddBook_Click);
             // 
+            // rentBook
+            // 
+            this.rentBook.Location = new System.Drawing.Point(266, 281);
+            this.rentBook.Name = "rentBook";
+            this.rentBook.Size = new System.Drawing.Size(75, 23);
+            this.rentBook.TabIndex = 4;
+            this.rentBook.Text = "Rent Book";
+            this.rentBook.UseVisualStyleBackColor = true;
+            this.rentBook.Click += new System.EventHandler(this.rentBook_Click);
+            // 
             // BookView
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoSize = true;
             this.ClientSize = new System.Drawing.Size(434, 311);
+            this.Controls.Add(this.rentBook);
             this.Controls.Add(this.AddBook);
             this.Controls.Add(this.BookOverview);
             this.Controls.Add(this.menuStrip1);
@@ -227,6 +239,7 @@
         private System.Windows.Forms.ToolStripMenuItem miRentalsFindUser;
         private System.Windows.Forms.ToolStripMenuItem miRentalsFindOverdue;
         private System.Windows.Forms.ToolStripMenuItem miLogout;
+        private System.Windows.Forms.Button rentBook;
     }
 }
 
