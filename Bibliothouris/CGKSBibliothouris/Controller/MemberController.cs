@@ -25,17 +25,13 @@ namespace CGKSBibliothouris.Controller
 
         public MemberController()
         {
-            //this.memberView = new MemberView();
+            this.memberView = new MemberView();
             this.memberService = new MemberService(new MemberRepository());
-            //this.addmember = new AddMember();
-            
-            //this.addmember.AddController(this);
+            memberView.AddMemberController(this);
         }
 
         public void ShowView()
         {
-            this.memberView = new MemberView();
-            memberView.AddMemberController(this);
             LoadAllMembers();
             memberView.ShowDialog();
         }
@@ -80,13 +76,9 @@ namespace CGKSBibliothouris.Controller
                 if (memberService.Login(inss, password))
                 {
                     Person p = memberService.GetMember(inss);
-                    //BookView bv = new BookView();
-                    BookController bc = mainController.BookController;
-                    //bv.AddController(bc);
-                    //login.Hide();
                     mainController.HideLoginView();
-                    bc.SetAccesRights(p);
-                    bc.ShowMainView();
+                    mainController.BookController.SetAccesRights(p);
+                    mainController.BookController.ShowMainView();
                 }
             }
             catch (AuthenticationException e)
@@ -95,11 +87,11 @@ namespace CGKSBibliothouris.Controller
             }
         }
 
-        public void ShowLogin()
+        /*public void ShowLogin()
         {
             login = new Login(mainController);
             login.ShowDialog();
-        }
+        }*/
 
         public void AddMainController()
         {
