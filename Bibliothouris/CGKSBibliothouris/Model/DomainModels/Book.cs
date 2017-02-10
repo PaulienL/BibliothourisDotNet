@@ -48,6 +48,13 @@ namespace CGKSBibliothouris.Model.DomainModels
 
         private bool DoValidateISBN()
         {
+            if (!ValidateIsbnFormat()) return false;
+
+            return ValidateIsbnChecksum();
+        }
+
+        private bool ValidateIsbnFormat()
+        {
             if (Isbn == null)
             {
                 return false;
@@ -62,16 +69,19 @@ namespace CGKSBibliothouris.Model.DomainModels
             {
                 return false;
             }
-                
+            return true;
+        }
+
+        private bool ValidateIsbnChecksum()
+        {
             long sum = 0;
             for (int i = 0; i < 12; i++)
             {
-                int digit=int.Parse(Isbn.ElementAt(i).ToString());
+                int digit = int.Parse(Isbn.ElementAt(i).ToString());
                 sum += (i % 2 == 0) ? digit * 1 : digit * 3;
             }
             int checksum = 10 - (int) (sum % 10);
 
-            Console.WriteLine(checksum);
             return checksum == int.Parse(Isbn.ElementAt(12).ToString());
         }
     }
