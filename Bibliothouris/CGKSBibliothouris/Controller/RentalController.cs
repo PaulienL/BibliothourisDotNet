@@ -1,12 +1,12 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace CGKSBibliothouris.Controller
+﻿namespace CGKSBibliothouris.Controller
 {
-    class RentalController
+    public class RentalController
     {
+        public MainController MainController { get; private set; }
+
+        public void AddMainController()
+        {
+            MainController = MainController.GetInstance();
+        }
     }
 }

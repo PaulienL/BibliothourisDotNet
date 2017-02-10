@@ -11,15 +11,15 @@ using CGKSBibliothouris.Controller;
 
 namespace CGKSBibliothouris.View {
     public partial class Login : Form {
-        private MemberController controller;
+        private readonly MainController controller;
 
-        public Login(MemberController controller) {
+        public Login(MainController controller) {
             this.controller = controller;
             InitializeComponent();
         }
 
         private void btnCreate_Click(object sender, EventArgs e) {
-            controller.AddMemberView();
+            controller.MemberController.AddMemberView();
         }
 
         private void btnLogin_Click(object sender, EventArgs e)

@@ -11,22 +11,22 @@ namespace CGKSBibliothouris.Controller
 {
     public class BookController : Controller
     {
-        public MemberController memberController;
-        private BookService bookservice;
-        private BookView bookView;
-        private BookDetails bookDetails; 
+        private MainController mainController;
 
-        public BookController(BookView bookView, MemberController memberController, BookDetails bookDetails)
+        private readonly BookService bookservice;
+        private readonly BookView bookView;
+        private readonly BookDetails bookDetails; 
+
+        public BookController()
         {
-            this.memberController = memberController;
             bookservice = new BookService();
-            this.bookView = bookView;
+            this.bookView = new BookView();
             bookView.AddController(this);
-            this.bookDetails = bookDetails;
+            this.bookDetails = new BookDetails();
             bookDetails.AddController(this); 
         }
         
-        internal List<Book> GetAllBooks()
+        public List<Book> GetAllBooks()
         {
             return bookservice.GetAllBooks();
         }
@@ -44,7 +44,7 @@ namespace CGKSBibliothouris.Controller
 
         public void ShowMembers()
         {
-            memberController.ShowView();
+            mainController.ShowMemberView();
         }
 
         internal void CreateBook(string firstName, string lastName, string title, string isbn)
@@ -118,6 +118,11 @@ namespace CGKSBibliothouris.Controller
         public void Exit()
         {
             Environment.Exit(0);
+        }
+
+        public void AddMainController()
+        {
+            mainController = MainController.GetInstance();
         }
     }
 }

@@ -10,27 +10,32 @@ using CGKSBibliothouris.View;
 using System.ComponentModel.DataAnnotations;
 using System.Security.Authentication;
 using System.Security.Cryptography;
+using CGKSBibliothouris.Model.Repositories;
 
 namespace CGKSBibliothouris.Controller
 {
     public class MemberController : Controller
     {
+        private MainController mainController;
+
         private MemberView memberView;
         private MemberService memberService;
         private AddMember addmember;
         private Login login;
 
-        public MemberController(MemberView memberView, MemberService memberService, AddMember addmember)
+        public MemberController()
         {
-            this.memberView = memberView;
-            this.memberService = memberService;
-            this.addmember = addmember;
-            memberView.AddMemberController(this);
-            addmember.AddController(this);
+            //this.memberView = new MemberView();
+            this.memberService = new MemberService(new MemberRepository());
+            //this.addmember = new AddMember();
+            
+            //this.addmember.AddController(this);
         }
 
         public void ShowView()
         {
+            this.memberView = new MemberView();
+            memberView.AddMemberController(this);
             LoadAllMembers();
             memberView.ShowDialog();
         }
@@ -75,10 +80,11 @@ namespace CGKSBibliothouris.Controller
                 if (memberService.Login(inss, password))
                 {
                     Person p = memberService.GetMember(inss);
-                    BookView bv = new BookView();
-                    BookController bc = new BookController(bv, this, new BookDetails());
-                    bv.AddController(bc);
-                    login.Hide();
+                    //BookView bv = new BookView();
+                    BookController bc = mainController.BookController;
+                    //bv.AddController(bc);
+                    //login.Hide();
+                    mainController.HideLoginView();
                     bc.SetAccesRights(p);
                     bc.ShowMainView();
                 }
@@ -91,8 +97,13 @@ namespace CGKSBibliothouris.Controller
 
         public void ShowLogin()
         {
-            login = new Login(this);
+            login = new Login(mainController);
             login.ShowDialog();
+        }
+
+        public void AddMainController()
+        {
+            mainController = MainController.GetInstance();
         }
     }
 }

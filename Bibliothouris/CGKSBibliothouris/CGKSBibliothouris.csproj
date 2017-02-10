@@ -50,6 +50,8 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Controller\MainController.cs" />
+    <Compile Include="Controller\RentalController.cs" />
     <Compile Include="Model\DomainModels\Administrator.Cs" />
     <Compile Include="Model\DomainModels\MemberValidator.cs" />
     <Compile Include="Model\DomainModels\Rental.cs" />

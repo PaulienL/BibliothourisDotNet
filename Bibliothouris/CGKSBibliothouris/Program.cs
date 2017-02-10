@@ -18,9 +18,13 @@ namespace CGKSBibliothouris
         [STAThread]
         static void Main()
         {
+            /*
             var memberService = new MemberService(new MemberRepository());
             var memberController = new MemberController(new MemberView(), memberService, new AddMember());
-            memberController.ShowLogin();
+            memberController.ShowLogin();*/
+
+            MainController mc = MainController.GetInstance();
+            mc.ShowView();
         }
     }
 }
