@@ -79,5 +79,10 @@ namespace CGKSBibliothouris
                 mnRentals.Enabled = true;
             }
         }
+
+        private void miExit_Click(object sender, EventArgs e)
+        {
+            bookcontroller.Exit();
+        }
     }
 }

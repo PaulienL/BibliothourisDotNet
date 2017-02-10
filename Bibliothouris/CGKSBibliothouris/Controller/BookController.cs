@@ -114,5 +114,10 @@ namespace CGKSBibliothouris.Controller
         {
             bookView.ShowDialog();
         }
+
+        public void Exit()
+        {
+            Environment.Exit(0);
+        }
     }
 }

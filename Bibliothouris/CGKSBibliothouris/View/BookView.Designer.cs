@@ -64,8 +64,8 @@
             // mnProgram
             // 
             this.mnProgram.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.miExit,
-            this.miLogout});
+            this.miLogout,
+            this.miExit});
             this.mnProgram.Name = "mnProgram";
             this.mnProgram.Size = new System.Drawing.Size(65, 20);
             this.mnProgram.Text = "Program";
@@ -73,13 +73,16 @@
             // miExit
             // 
             this.miExit.Name = "miExit";
-            this.miExit.Size = new System.Drawing.Size(112, 22);
+            this.miExit.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Alt | System.Windows.Forms.Keys.F4)));
+            this.miExit.Size = new System.Drawing.Size(154, 22);
             this.miExit.Text = "Exit";
+            this.miExit.Click += new System.EventHandler(this.miExit_Click);
             // 
             // miLogout
             // 
             this.miLogout.Name = "miLogout";
-            this.miLogout.Size = new System.Drawing.Size(112, 22);
+            this.miLogout.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Alt | System.Windows.Forms.Keys.F3)));
+            this.miLogout.Size = new System.Drawing.Size(154, 22);
             this.miLogout.Text = "Logout";
             // 
             // mnMembers
@@ -93,7 +96,7 @@
             // miMembersShowAll
             // 
             this.miMembersShowAll.Name = "miMembersShowAll";
-            this.miMembersShowAll.Size = new System.Drawing.Size(120, 22);
+            this.miMembersShowAll.Size = new System.Drawing.Size(152, 22);
             this.miMembersShowAll.Text = "Show All";
             this.miMembersShowAll.Click += new System.EventHandler(this.MembersShow_Click);
             // 
@@ -120,6 +123,7 @@
             this.miBooksAdd.Name = "miBooksAdd";
             this.miBooksAdd.Size = new System.Drawing.Size(181, 22);
             this.miBooksAdd.Text = "Add Book...";
+            this.miBooksAdd.Click += new System.EventHandler(this.AddBook_Click);
             // 
             // mnRentals
             // 
