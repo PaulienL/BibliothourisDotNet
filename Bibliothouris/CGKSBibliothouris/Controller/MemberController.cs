@@ -18,14 +18,15 @@ namespace CGKSBibliothouris.Controller
     {
         private MainController mainController;
 
-        private MemberView memberView;
-        private MemberService memberService;
-        private AddMember addmember;
+        private readonly MemberView memberView;
+        private readonly MemberService memberService;
+        private readonly AddMember addmember;
 
         public MemberController()
         {
             this.memberView = new MemberView();
             this.memberService = new MemberService(new MemberRepository());
+            addmember = new AddMember();
             memberView.AddMemberController(this);
         }
 

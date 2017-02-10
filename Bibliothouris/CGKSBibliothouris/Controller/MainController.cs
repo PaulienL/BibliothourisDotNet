@@ -67,5 +67,9 @@ namespace CGKSBibliothouris.Controller {
         {
             loginView.Hide();
         }
+
+        public void Exit() {
+            Environment.Exit(0);
+        }
     }
 }

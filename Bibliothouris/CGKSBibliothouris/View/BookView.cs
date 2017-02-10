@@ -16,6 +16,7 @@ namespace CGKSBibliothouris
     public partial class BookView : Form
     {
         private BookController bookcontroller;
+        public MainController MainController { get; private set; }
 
         public BookView()
         {
@@ -82,7 +83,7 @@ namespace CGKSBibliothouris
 
         private void miExit_Click(object sender, EventArgs e)
         {
-            bookcontroller.Exit();
+            MainController.Exit();
         }
 
         private void rentBook_Click(object sender, EventArgs e)

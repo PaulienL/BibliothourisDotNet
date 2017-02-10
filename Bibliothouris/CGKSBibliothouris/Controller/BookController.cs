@@ -3,12 +3,10 @@ using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
 using System.Linq;
 using System.Windows.Forms;
-using CGKSBibliothouris.Controller;
 using CGKSBibliothouris.Model.DomainModels;
 using CGKSBibliothouris.View;
 
-namespace CGKSBibliothouris.Controller
-{
+namespace CGKSBibliothouris.Controller {
     public class BookController : Controller
     {
         private MainController mainController;
@@ -115,10 +113,7 @@ namespace CGKSBibliothouris.Controller
             bookView.ShowDialog();
         }
 
-        public void Exit()
-        {
-            Environment.Exit(0);
-        }
+
 
         public void AddMainController()
         {
