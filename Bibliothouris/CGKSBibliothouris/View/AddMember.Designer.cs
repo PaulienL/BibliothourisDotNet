@@ -55,7 +55,6 @@
             this.firstName.Name = "firstName";
             this.firstName.Size = new System.Drawing.Size(118, 20);
             this.firstName.TabIndex = 0;
-            this.firstName.TextChanged += new System.EventHandler(this.textBox1_TextChanged);
             // 
             // contextMenuStrip1
             // 
@@ -86,7 +85,6 @@
             this.lastName.Name = "lastName";
             this.lastName.Size = new System.Drawing.Size(118, 20);
             this.lastName.TabIndex = 4;
-            this.lastName.TextChanged += new System.EventHandler(this.textBox2_TextChanged);
             // 
             // number
             // 
@@ -94,7 +92,6 @@
             this.number.Name = "number";
             this.number.Size = new System.Drawing.Size(118, 20);
             this.number.TabIndex = 5;
-            this.number.TextChanged += new System.EventHandler(this.textBox3_TextChanged);
             // 
             // zipcode
             // 
@@ -102,7 +99,6 @@
             this.zipcode.Name = "zipcode";
             this.zipcode.Size = new System.Drawing.Size(118, 20);
             this.zipcode.TabIndex = 6;
-            this.zipcode.TextChanged += new System.EventHandler(this.textBox4_TextChanged);
             // 
             // street
             // 
@@ -110,7 +106,6 @@
             this.street.Name = "street";
             this.street.Size = new System.Drawing.Size(118, 20);
             this.street.TabIndex = 7;
-            this.street.TextChanged += new System.EventHandler(this.textBox5_TextChanged);
             // 
             // city
             // 
@@ -118,7 +113,6 @@
             this.city.Name = "city";
             this.city.Size = new System.Drawing.Size(118, 20);
             this.city.TabIndex = 8;
-            this.city.TextChanged += new System.EventHandler(this.textBox6_TextChanged);
             // 
             // label3
             // 
@@ -128,7 +122,6 @@
             this.label3.Size = new System.Drawing.Size(44, 13);
             this.label3.TabIndex = 9;
             this.label3.Text = "Number";
-            this.label3.Click += new System.EventHandler(this.label3_Click);
             // 
             // label4
             // 
@@ -138,7 +131,6 @@
             this.label4.Size = new System.Drawing.Size(35, 13);
             this.label4.TabIndex = 10;
             this.label4.Text = "Street";
-            this.label4.Click += new System.EventHandler(this.label4_Click);
             // 
             // zipcodeField
             // 
@@ -148,7 +140,6 @@
             this.zipcodeField.Size = new System.Drawing.Size(46, 13);
             this.zipcodeField.TabIndex = 11;
             this.zipcodeField.Text = "Zipcode";
-            this.zipcodeField.Click += new System.EventHandler(this.label5_Click);
             // 
             // label6
             // 
@@ -226,7 +217,6 @@
             this.Controls.Add(this.firstName);
             this.Name = "AddMember";
             this.Text = "AddMember";
-            this.Load += new System.EventHandler(this.AddMember_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 

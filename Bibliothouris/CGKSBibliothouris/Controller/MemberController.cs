@@ -28,6 +28,7 @@ namespace CGKSBibliothouris.Controller
             this.memberService = new MemberService(new MemberRepository());
             addmember = new AddMember();
             memberView.AddMemberController(this);
+            addmember.AddController(this);
         }
 
         public void ShowView()
@@ -52,8 +53,7 @@ namespace CGKSBibliothouris.Controller
             try
             {
                 memberService.CreateAndAddMember(firstName, lastName, street, number, zipcode, city, inss, password);
-                memberView.AddMember(new Member(firstName, lastName, inss, new Address(street, city, number, zipcode),
-                    password));
+                memberView.AddMember(memberService.GetMember(inss));
                 addmember.Close();
                 addmember.Clear();
             }

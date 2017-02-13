@@ -32,7 +32,7 @@ namespace CGKSBibliothouris.View
             
         }
 
-        internal void AddMember(Member member)
+        internal void AddMember(Person member)
         {
             {
                 ListViewItem memberItem = new ListViewItem(member.Id.ToString());
